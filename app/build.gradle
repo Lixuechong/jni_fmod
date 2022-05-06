@@ -16,8 +16,19 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags ""
+                //cppFlags "" //写空串的话，默认是支持四种架构指令的手机平台。
+
+                //TODO 第四步: 指定cmake只使用armeabi-v7a的CPU架构。CMAKE_ANDROID_ARCH_ABI只会有"armeabi-v7a"。
+                abiFilters "armeabi-v7a"
             }
+        }
+
+        /**
+         * 没有ndk这个函数时，生成apk时，会有四种CPU架构的so库。
+         */
+        ndk {
+            // TODO 第五步: 决定了apk生成时，lib路径下只有"armeabi-v7a"的CPU架构的so库。
+            abiFilters("armeabi-v7a")
         }
     }
 
@@ -41,9 +52,13 @@ android {
 
 dependencies {
 
+    //TODO 第六步: 引入fmod.jar
+    implementation files('libs\\fmod.jar')
+
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation files('libs/fmod.jar')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
