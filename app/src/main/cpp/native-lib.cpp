@@ -19,7 +19,7 @@
 
 using namespace FMOD; // 添加FMOD的命名空间
 
-//是否正在播放
+//是否正在播放 (通过判断playStatus对象是否为NULL，来确定是否正在播放。)
 jclass playStatus;
 
 extern "C"
