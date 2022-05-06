@@ -1,19 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/sample_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:text="hello，同学们，大家好，欢迎来到享学课堂，我是今天的Derry老师"
+        android:textColor="#f00"
+        android:textSize="20dp" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:background="#FFF"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_normal"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="原声" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_luoli"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="萝莉" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_dashu"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="大叔" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_jingsong"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="惊悚" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_gaoguai"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="搞怪" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btn_kongling"
+                    style="@style/AudioImgStyle"
+                    android:onClick="onFix"
+                    android:src="@drawable/ic_launcher_foreground" />
+
+                <TextView
+                    style="@style/AudioTextStyle"
+                    android:text="空灵" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
