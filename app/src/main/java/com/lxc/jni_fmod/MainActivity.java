@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("native-lib"); //加载总库，总库中关联子库。
     }
 
     // 播放的路径

@@ -40,8 +40,9 @@ android {
     }
     externalNativeBuild {
         cmake {
+            //下面的代码修改路径后，src/main/cpp/CMakeLists.txt会失效，启用修改后路径下的CMakeLists.txt
             path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
+            version "3.10.2" // Cmake使用的版本。
         }
     }
     compileOptions {
